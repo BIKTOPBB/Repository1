@@ -1,0 +1,13 @@
+#left_block{
+	border: 1px solid #ccc;
+	float: left;
+	width: 600px;
+	height: 100%;
+}
+#right_block{
+	padding-left:10px; 
+	border: 1px solid #CCC; 
+	float: left; width: 540px;  
+	height: 100%; 
+	text-indent:10px
+}

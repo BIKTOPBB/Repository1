@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+    <link href="/style.css" rel="stylesheet">  
+  </head>
+<body>
+<div id="left_block">
+    <form action="/visit" method="POST" role="form" style="float:left; width:500px;height:100%; padding-left: 20px; padding-bottom: 20px;">
+        <h2 style="text-align: center;">Записаться</h2>
+        <p>На этой странице вы сможете записаться к нам в Barber Shop</p>
+        <div class="form-group">
+          <label>Ваше имя</label>
+          <input name="username" type="text" class="form-control" placeholder="Ваше имя">
+        </div>
+
+        <div class="form-group bbb">
+          <label>Ваш телефон</label>
+          <input name="phone" type="text" class="form-control" placeholder="Ваш телефон">
+        </div>
+
+        <div class="form-group bbb">
+          <label>Когда вас ждать?</label>
+          <input name="datetime" type="text" class="form-control" placeholder="Введите дату и время">
+        </div>
+
+        <div class="form-group bbb">
+        <label>Enter your Par...</label>
+        <select name="par" class="form-control">
+          <option VALUE="">---</option>
+          <option VALUE="Par_2">Par_2</option>
+          <option VALUE="Par_3">Par_3</option>
+          <option VALUE="Par_4">Par_4</option>
+          <option VALUE="Par_5">Par_5</option>
+        </select>
+        </div>
+
+        <div class="form-group">      <!--https://github.com/tkrotoff/jquery-simplecolorpicker-->
+        <select name="color" id='color'>
+        <option value="#7bd148">Green</option>
+        <option value="#5484ed">Bold blue</option>
+        <option value="#a4bdfc">Blue</option>
+        <option value="#46d6db">Turquoise</option>
+        <option value="#7ae7bf">Light green</option>
+        <option value="#51b749">Bold green</option>
+        <option value="#fbd75b">Yellow</option>
+        <option value="#ffb878">Orange</option>
+        <option value="#ff887c">Red</option>
+        <option value="#dc2127">Bold red</option>
+        <option value="#dbadff">Purple</option>
+        <option value="#e1e1e1">Gray</option>
+        </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Записаться</button>
+
+    </form>
+</div>
+
+<div id="right_block">
+	<h3 id="aaa" style="text-align: center;">Редактируем положение текста:</h3>
+  <p>1. style="..." - задание самого стиля css</p>
+  <p>2. border:1px solid #000000; - рамка, шириной 1 пиксель, сплошная и черного цвета (цвет можно указывать как в шестнадцатеричной системе указания цветов, так и обычными общепринятыми английскими словами, типа red, blue, yellow)</p>
+  <p>3. width:150px; - ширина блока 150 пикселей</p>
+  <p>4. height:100px; - высота блока 100 пикселей</p>
+  <p>5. margin-top:20px; - внешний верхний отступ от элементов - 20 пикселей</p>
+  <p>6. margin-right:10px; - внешний правый отступ от элементов - 130 пикселей</p>
+  <p>7. margin-bottom:150px; - внешний нижний отступ от элементов - 20 пикселей</p>
+  <p>6. margin-left:130px; - внешний левый отступ от элементов 130 пикселей</p>
+  <p>7. padding-top:30px; - отступ сверху 20 пикселей</p>
+  <p>8. padding-left:15px; - левый отступ 130 пикселей</p>
+  <p>9. background-color:green; - заливка блока зеленым (можно так же устанавливать цвета в шестнадцатеричной системе)</p>
+  <p>10. text-indent:100px; - устанавливаем параграф
+</div>
+</body>
+
+</html>
+<!--<script type="text/javascript" src="/scripts.js"></script>  это метод подключение джава скрипта, а можно еще и так ->    !!!!! -->
+
+<!--<script type="text/javascript">
+  alert("Привет мудила! )))");
+</script>                                                        'это второй метод подключения джава скрипта'    --> 
+<script type="text/javascript">
+  $('#aaa').css('background-color','#CCC') //тут мы с помощью джава скрипта и jQvery создаем стиль ааа и прописываем ему данные через запятую. Присваиваем в id
+  $('.bbb').css('background-color','green')  //тут мы с помощью джава скрипта и jQvery создаем стиль bbb. Присваиваем в Class
+
+  $('#color').simplecolorpicker();
+</script>                                                     
+
+<!--<script type="text/javascript">
+ $(function() {
+  $('#color').simplecolorpicker();
+})
+  </script>  'этот метотподключения скрипта можно ставить в любом месте программы, предыдущий только после селекта!!!'-->    
