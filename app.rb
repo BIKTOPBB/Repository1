@@ -7,6 +7,7 @@ get '/' do
 end
 
 get '/about' do
+	@error="something!!!!"
 	erb :about
 end
 
@@ -52,15 +53,33 @@ post '/visit' do
 	@par = params[:par]
 	@color = params[:color]
 	
-	@title = "Thank you!"
-	@message = "Dear #{@name1}(#{@phone}), we'll be waiting for you at #{@datetime}. Your barber is #{@par}. Ваш цвет: #{@color}"
-   	
-	
-	f = File.open "./public/data.txt", "a"
+	if @name1==''
+		@error="Введите имя!"
+		return erb :visit
+	end
+	if @phone==''
+		@error="Введите телефон!"
+		return erb :visit
+	end
+	if @datetime==''
+		@error="Введите дату и время!"
+		return erb :visit
+	end
+	if @par==''
+		@error="Выберите парикмахера!"
+		return erb :visit
+	end
+
+#	@title = "Thank you!"
+#	@message = "Dear #{@name1}(#{@phone}), we'll be waiting for you at #{@datetime}. Your barber is #{@par}. Ваш цвет: #{@color}"
+   	f = File.open "./public/data.txt", "a"
 	f.write "User: #{@name1}, Phone: #{@phone}, Date and time: #{@datetime}. Par...:#{@par}\n"
 	f.close
 
-        erb :message
+   	erb "Dear #{@name1}(#{@phone}), we'll be waiting for you at #{@datetime}. Your barber is #{@par}. Ваш цвет: #{@color}"
+	
+	
+#        erb :message
 	
 end
 
